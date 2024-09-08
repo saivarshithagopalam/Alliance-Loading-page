@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alliance University</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="#">Alliance University</a></div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="campus.html">Campus Life</a></li>
+                <li><a href="apply.html">Apply Now</a></li>
+            </ul>
+            <button class="toggle-btn" id="toggle-btn">Menu</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Welcome to Alliance University</h1>
+        <p>Shaping Future Leaders with World-Class Education</p>
+        <button class="cta">Apply Now</button>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="apply" id="apply">
+        <h2>Apply Now</h2>
+        <form action="process_form.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Why do you want to join?" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Alliance University. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

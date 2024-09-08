@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply Now - Alliance University</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url('campus-life-library-1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure body takes full height */
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent header for contrast */
+            padding: 10px;
+        }
+
+        .apply-now {
+            flex: 1; /* Allow this section to grow and fill space */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center items horizontally */
+            justify-content: center; /* Center items vertically */
+            text-align: center; /* Center text */
+            padding: 20px;
+        }
+
+        footer {
+            margin-top: auto; /* Push footer to bottom */
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent footer for contrast */
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        input {
+            margin: 5px 0; /* Add spacing between inputs */
+            padding: 10px;
+            width: 80%; /* Set width for inputs */
+        }
+
+        button {
+            padding: 10px 15px; /* Style for buttons */
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Darken button on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="#">Alliance University</a></div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="campus.html">Campus Life</a></li>
+                <li><a href="apply.html">Apply Now</a></li>
+            </ul>
+            <button class="toggle-btn" id="toggle-btn">Menu</button>
+        </nav>
+    </header>
+
+    <!-- Apply Now Section -->
+    <section class="apply-now" id="apply">
+        <h2>Apply Now</h2>
+        
+        <div class="login-form">
+            <h3>Login</h3>
+            <form action="process_login.php" method="POST">
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="password" name="password" placeholder="Your Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#register" id="register-link">Register here</a></p>
+        </div>
+
+        <div class="registration-form" id="register" style="display:none;">
+            <h3>Register</h3>
+            <form action="process_registration.php" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="password" name="password" placeholder="Your Password" required>
+                <button type="submit">Register</button>
+            </form>
+            <p>Already have an account? <a href="#login" id="login-link">Login here</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Alliance University. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Toggle between login and registration forms
+        document.getElementById('register-link').onclick = function() {
+            document.querySelector('.login-form').style.display = 'none';
+            document.querySelector('.registration-form').style.display = 'block';
+        };
+
+        document.getElementById('login-link').onclick = function() {
+            document.querySelector('.registration-form').style.display = 'none';
+            document.querySelector('.login-form').style.display = 'block';
+        };
+    </script>
+</body>
+</html>
